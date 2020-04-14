@@ -22,7 +22,7 @@ public class UserController {
     public CommonResult addUser(String username) {
         try {
             int addFlag = userService.addUser(username);
-            return new CommonResult(addFlag, "添加用户成功 - " + username, null);
+            return new CommonResult(addFlag, "添加用户成功 - x" + username, null);
         } catch (Exception e) {
             log.info("添加失败", e);
             return new CommonResult(-1, "添加用户失败", null);
