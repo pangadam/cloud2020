@@ -22,7 +22,6 @@ public class UserController {
     public CommonResult addUser(String username) {
         try {
             int addFlag = userService.addUser(username);
-            System.out.println("hot fix ......");
             return new CommonResult(addFlag, "添加用户成功 - " + username, null);
         } catch (Exception e) {
             log.info("添加失败", e);
