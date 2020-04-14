@@ -34,8 +34,9 @@ public class UserController {
         User user = userService.getUser(id);
         if (user != null) {
             return new CommonResult<User>(0, "用户数据", user);
+        } else {
+            return new CommonResult<User>(-1, "查询失败", null);
         }
-        return new CommonResult<User>(-1, "查询失败", null);
     }
 
 }
