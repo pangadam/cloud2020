@@ -4,10 +4,7 @@ import com.pang.cloud.entity.CommonResult;
 import com.pang.cloud.entity.User;
 import com.pang.cloud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -19,10 +16,10 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/user/add")
-    public CommonResult<Object> addUser(String username) {
+    public CommonResult<Object> addUser(@RequestBody User user) {
         try {
-            int addFlag = userService.addUser(username);
-            return new CommonResult<Object>(addFlag, "添加用户成功 - " + username, null);
+            int addFlag = userService.addUser(user);
+            return new CommonResult<Object>(addFlag, "添加用户成功 - " + user.getUsername(), null);
         } catch (Exception e) {
             log.info("添加失败", e);
             return new CommonResult<Object>(-1, "添加用户失败", null);
