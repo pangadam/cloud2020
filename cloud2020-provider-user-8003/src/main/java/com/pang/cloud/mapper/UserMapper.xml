@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pang.cloud.mapper.UserMapper">
+    <insert id="addUser" parameterType="com.pang.cloud.entity.User" keyProperty="id" useGeneratedKeys="true">
+		insert into tb_user(username) values(#{username});
+	</insert>
+    <select id="getUser" parameterType="java.lang.Integer" resultType="com.pang.cloud.entity.User">
+		select user_id as id, username from tb_user where user_id = #{id}
+	</select>
+</mapper>
