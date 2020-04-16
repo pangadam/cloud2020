@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud2020-eureka-server-7001
+    name: cloud2020-eureka-server
 
 eureka:
   instance:
@@ -14,4 +14,4 @@ eureka:
     # false表示不从注册中心抓取服务信息
     fetch-registry: false
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+      defaultZone: http://eureka7003.com:7003/eureka,http://eureka7002.com:7002/eureka
