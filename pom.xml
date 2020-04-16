@@ -13,6 +13,8 @@
         <module>cloud2020-provider-user-8001</module>
         <module>cloud2020-api-commons</module>
         <module>cloud2020-consumer-front-80</module>
+        <module>cloud2020-eureka-server-7002</module>
+        <module>cloud2020-eureka-server-7003</module>
     </modules>
 
     <properties>
