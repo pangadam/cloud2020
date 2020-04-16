@@ -1,2 +1,16 @@
 server:
   port: 80
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: cloud2020-provider-user-8001
+
+spring:
+  application:
+    name: cloud2020-consumer-front

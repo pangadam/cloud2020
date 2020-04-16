@@ -13,6 +13,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.pang.cloud</groupId>
             <artifactId>cloud2020-api-commons</artifactId>
             <version>${project.version}</version>

@@ -18,3 +18,13 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: cloud2020-provider-user-8001
