@@ -1,0 +1,14 @@
+server:
+  port: 3377
+
+spring:
+  application:
+    name: cloudalibaba-nacos-config-client
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        name: cloudalibaba-nacos-config-client
+        server-addr: localhost:8848
+      discovery:
+        server-addr: localhost:8848

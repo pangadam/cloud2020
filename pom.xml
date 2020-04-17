@@ -21,6 +21,7 @@
         <module>cloudalibaba-provider-nacos-user-9002</module>
         <module>cloudalibaba-provider-nacos-user-9003</module>
         <module>cloudalibaba-consumer-nacos-front-83</module>
+        <module>cloudalibaba-nacos-config-client-3377</module>
     </modules>
 
     <properties>
