@@ -12,7 +12,8 @@ import javax.annotation.Resource;
 @RestController
 public class FrontController {
 
-    private String prefix = "http://localhost:8001";
+//    private String prefix = "http://localhost:8001";
+    private String prefix = "http://CLOUD2020-PROVIDE-USER";
 
     @Resource
     private RestTemplate restTemplate;

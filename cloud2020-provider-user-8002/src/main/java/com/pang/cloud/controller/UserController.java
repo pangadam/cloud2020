@@ -4,6 +4,7 @@ import com.pang.cloud.entity.CommonResult;
 import com.pang.cloud.entity.User;
 import com.pang.cloud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -14,6 +15,9 @@ public class UserController {
 
     @Resource
     private UserService userService;
+
+    @Value("${server.port}")
+    private String serverPort;
 
     @PostMapping("/user/add")
     public CommonResult<Object> addUser(@RequestBody User user) {
@@ -30,7 +34,7 @@ public class UserController {
     public CommonResult<User> getUser(@PathVariable("id") Integer id) {
         User user = userService.getUser(id);
         if (user != null) {
-            return new CommonResult<User>(0, "用户数据", user);
+            return new CommonResult<User>(0, "用户数据, serverPort : " + serverPort, user);
         } else {
             return new CommonResult<User>(-1, "查询失败", null);
         }

@@ -28,3 +28,8 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: cloud2020-provider-user-8003
+
+info:
+  company.name: ${spring.application.name}
+  version: V1.0.0
+  server.port: ${server.port}

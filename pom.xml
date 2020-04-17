@@ -17,6 +17,10 @@
         <module>cloud2020-eureka-server-7003</module>
         <module>cloud2020-provider-user-8002</module>
         <module>cloud2020-provider-user-8003</module>
+        <module>cloudalibaba-provider-nacos-user-9001</module>
+        <module>cloudalibaba-provider-nacos-user-9002</module>
+        <module>cloudalibaba-provider-nacos-user-9003</module>
+        <module>cloudalibaba-consumer-nacos-front-83</module>
     </modules>
 
     <properties>
@@ -46,6 +50,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>2.2.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
