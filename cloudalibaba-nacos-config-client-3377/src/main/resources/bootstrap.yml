@@ -9,6 +9,8 @@ spring:
       config:
         file-extension: yaml
         name: cloudalibaba-nacos-config-client
-        server-addr: localhost:8848
+        server-addr: 192.168.28.136:83
+        group: TEST_GROUP
+        namespace: 9b4597e4-fb56-438d-b1ba-60fe38716edb
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.28.136:83

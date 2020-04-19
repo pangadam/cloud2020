@@ -22,6 +22,7 @@
         <module>cloudalibaba-provider-nacos-user-9003</module>
         <module>cloudalibaba-consumer-nacos-front-83</module>
         <module>cloudalibaba-nacos-config-client-3377</module>
+        <module>cloudalibaba-sentinel-service-8401</module>
     </modules>
 
     <properties>
@@ -36,6 +37,7 @@
         <druid.version>1.1.16</druid.version>
         <druid.spring.boot.version>1.1.16</druid.spring.boot.version>
         <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
     </properties>
 
     <dependencyManagement>
@@ -57,7 +59,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.0.RELEASE</version>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
