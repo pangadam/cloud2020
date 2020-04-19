@@ -1,0 +1,21 @@
+server:
+  port: 8401
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: cloud-study-centos.com:8080
+        port: 8719
+#      filter:
+#        enabled: false
+    nacos:
+      discovery:
+        server-addr: cloud-study-centos.com:83
+  application:
+    name: cloudalibaba-sentinel-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
