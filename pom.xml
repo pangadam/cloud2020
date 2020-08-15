@@ -23,6 +23,9 @@
         <module>cloudalibaba-consumer-nacos-front-83</module>
         <module>cloudalibaba-nacos-config-client-3377</module>
         <module>cloudalibaba-sentinel-service-8401</module>
+        <module>cloud2020-provider-user-gateway-8004</module>
+        <module>cloud2020-gateway-9527</module>
+        <module>security_demo01</module>
     </modules>
 
     <properties>

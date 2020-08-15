@@ -7,6 +7,7 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+        namespace: 84a87126-fcb8-47bb-b72f-8ea8dc2d1dba
   datasource:
     druid:
       url: jdbc:mysql://127.0.0.1:8068/clouddb2020_2?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
