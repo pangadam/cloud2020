@@ -26,6 +26,7 @@
         <module>cloud2020-provider-user-gateway-8004</module>
         <module>cloud2020-gateway-9527</module>
         <module>security_demo01</module>
+        <module>es2021-001</module>
     </modules>
 
     <properties>
@@ -70,6 +71,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.1.0</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>

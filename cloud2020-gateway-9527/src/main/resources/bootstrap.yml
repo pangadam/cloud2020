@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: cloud2020-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        namespace: 84a87126-fcb8-47bb-b72f-8ea8dc2d1dba
+      discovery:
+        server-addr: localhost:8848
+        namespace: 84a87126-fcb8-47bb-b72f-8ea8dc2d1dba
+    gateway:
+      routes:
+        - id: user_9001-1
+#          uri: http://localhost:9001
+          uri: lb://cloudalibaba-provider-nacos-user
+          predicates:
+            - Path=/user/get/**
+
+        - id: user_9001-2
+          uri: http://news.baidu.com
+          predicates:
+            - Path=/**
+      discovery:
+        locator:
+          enabled: true
+
+server:
+  port: 9527
